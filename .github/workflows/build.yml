@@ -29,7 +29,6 @@ jobs:
         keystore_alias: frog
       run: |
         git clone --depth=1 --branch=master https://github.com/Radio-Silence-1/MindustryClient
-        cd Mindustry
         echo "BODY=$(git rev-parse HEAD)" >> $GITHUB_ENV
         sed -i 's/applicationId "io.anuke.mindustry"/applicationId "io.anuke.mindustry.be"/g' android/build.gradle
         sed -i 's/"io.anuke.mindustry"/"io.anuke.mindustry.be"/g' android/AndroidManifest.xml
